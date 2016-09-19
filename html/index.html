@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <script type="text/javascript">
+      function myWebsocketStart() {
+
+        console.log('Subscribing...');
+        var ws = new WebSocket(`ws://${window.location.host}/ws`);
+        const image$ = document.getElementById('cover')
+
+        ws.onmessage = function (evt) {
+          try {
+            const data = JSON.parse(evt.data);
+
+            const artist = document.getElementById('artist');
+            artist.innerHTML = data.artist;
+
+            const name = document.getElementById('name');
+            name.innerHTML = data.name;
+
+            const id = data.id.split(':')[2];
+            fetch(`https://api.spotify.com/v1/tracks/${id}`)
+              .then(r => r.json())
+              .then((response) => {
+                const image = response.album.images[1];
+                const imageURL = image.url;
+                console.log(imageURL);
+                image$.src = imageURL;
+              })
+          } catch (e) {}
+
+          console.log(evt);
+        };
+
+        ws.onclose = function() {
+          console.log('Closing...')
+          const title = document.getElementById('title');
+          title.innerHTML = 'Connection closed';
+        };
+
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="javascript:myWebsocketStart()">Subscribe</button>
+    <h3 id="title">Current Song</h3>
+    <span id="name"></span>
+    <hr />
+    <span id="artist"></span>
+    <hr />
+    <img id="cover" src="" />
+  </body>
+</html>
