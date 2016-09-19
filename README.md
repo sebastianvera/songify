@@ -29,7 +29,7 @@ to see the current song.
 
 ### TODO
 
-- [ ] Prettify the web page.
+- [ ] Prettify the web page (I didn't add any css).
 - [ ] Add Angular 2 ui version (just for fun).
 - [ ] Add React ui version (just for fun).
 - [ ] Maybe add support to other platforms?.
