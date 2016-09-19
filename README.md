@@ -20,7 +20,7 @@ You need to have go installed.
 - Run `go get`.
 - Run `make` to start the program.
 
-This will mount a web server on `localhost:1616` port, where you'll be able
+This will mount a web server on `localhost:1616`, where you'll be able
 to see the current song.
 
 > To change the port you can use the `-port` flag.
