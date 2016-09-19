@@ -1,4 +1,4 @@
-## Songify
+# Songify
 
 I wanted to display spotify's current song while streaming
 (using OBS) by using a web page and the *CLR Browser* plugin
@@ -11,7 +11,7 @@ It currently work for **mac only**.
 The server uses websockets to keep the current song updated on
 the web page.
 
-### Usage
+## Usage
 
 You need to have go installed.
 
