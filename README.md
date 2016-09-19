@@ -5,11 +5,10 @@ I wanted to display spotify's current song while streaming
 or *BrowserSource*, but I didn't found either a plugin or software
 to do this. This is **under development**, since I built it in a couple of hours.
 
-It currently work for **mac only**.
-
-
 The server uses websockets to keep the current song updated on
 the web page.
+
+> It currently work for **mac only**.
 
 ## Usage
 
@@ -29,9 +28,9 @@ to see the current song.
 
 ### TODO
 
-- [ ] Prettify the web page (I didn't add any css).
-- [ ] Add Angular 2 ui version (just for fun).
-- [ ] Add React ui version (just for fun).
-- [ ] Maybe add support to other platforms?.
-- [ ] Refactor the server code.
+- [ ] Prettify the web page (**I didn't add any css**).
+- [ ] Add Angular 2 UI version (just for fun).
+- [ ] Add React UI version (just for fun).
+- [ ] Maybe add support to other platforms?
+- [ ] Refactor server code.
 
