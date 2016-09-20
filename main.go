@@ -18,6 +18,9 @@ var (
 	upgrader    = websocket.Upgrader{
 		ReadBufferSize:  1024,
 		WriteBufferSize: 1024,
+		CheckOrigin: func(r *http.Request) bool {
+			return true
+		},
 	}
 
 	port = flag.Int("port", 1616, "HTTP Server port")
