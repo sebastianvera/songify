@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/sebastianvera/spotify/spotify"
+	"github.com/sebastianvera/songify/spotify"
 )
 
 var (
